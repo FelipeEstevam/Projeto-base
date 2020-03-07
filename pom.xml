@@ -5,7 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.stefanini</groupId>
 	<artifactId>jpaexample</artifactId>
+<<<<<<< HEAD
 	<version>0.0.1T</version>
+=======
+	<version>0.0.1</version>
+>>>>>>> 7f89a83d6232a4604f83b1ad9ecc6813e3eb3127
 	<packaging>jar</packaging>
 
 	<properties>
