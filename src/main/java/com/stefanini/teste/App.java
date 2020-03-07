@@ -26,9 +26,10 @@ public class App {
 
 	public void executar() {
 		buscarTodos();
-//		encontrar();
+		encontrar();
 //		salvar();
 //		remover();
+		buscarTodosComFiltro();
 	}
 	
 	
@@ -37,7 +38,7 @@ public class App {
 	}
 
 	private void encontrar() {
-		Optional<Pessoa> pessoa = servico.encontrar(5L);
+		Optional<Pessoa> pessoa = servico.encontrar(10L);
 		if (pessoa.isPresent()) {
 			System.out.println("Pessoa encontrada");
 			System.out.println(pessoa.get());
@@ -54,12 +55,22 @@ public class App {
 		});
 //		System.out.println();
 	}
+	
+	private void buscarTodosComFiltro() {
+		servico.getList().ifPresent(i -> {
+			i.forEach(b -> {
+				System.out.println(b);
+			});
+		});
+//		System.out.println();
+	}
 
 	public void salvar() {
-
 //		Pessoa pessoa = new Pessoa("JOAO", LocalDate.of(1995, 8, 24));
-//		pessoa.setEmail("joaom.dev@hotmail.com");
-//		servico.salvar(pessoa);
+
+		Pessoa pessoa = new Pessoa("LAURA", "laura@gmail.com", LocalDate.of(1995, 8, 24), true);
+		pessoa.setEmail("joaom.dev@hotmail.com");
+		servico.salvar(pessoa);
 
 	}
 

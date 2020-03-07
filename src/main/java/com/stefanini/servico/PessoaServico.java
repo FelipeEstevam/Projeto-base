@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 
 import com.stefanini.dao.PessoaDao;
+import com.stefanini.dto.FiltroPessoa;
 import com.stefanini.model.Pessoa;
 import com.stefanini.util.IGenericService;
 
@@ -42,10 +43,10 @@ public class PessoaServico implements IGenericService<Pessoa, Long> {
 	/**
 	 * Remover uma pessoa pelo id
 	 */
-	@Override
-	public void remover(@Valid Long id) {
-		dao.remover(id);		
-	}
+//	@Override
+//	public void remover(@Valid Long id) {
+//		dao.remover(id);		
+//	}
 
 
 	/**
@@ -55,6 +56,11 @@ public class PessoaServico implements IGenericService<Pessoa, Long> {
 	public Optional<List<Pessoa>> getList() {
 		return dao.getList();
 	}
+	
+//	@Override
+//	public Optional<List<Pessoa>> getListFilter(FiltroPessoa filtro) {
+//		return dao.getListFilter();
+//	}
 
 
 	/**
@@ -63,6 +69,13 @@ public class PessoaServico implements IGenericService<Pessoa, Long> {
 	@Override
 	public Optional<Pessoa> encontrar(Long id) {
 		return dao.encontrar(id);
+	}
+
+
+	@Override
+	public void remover(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

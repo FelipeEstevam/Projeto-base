@@ -154,13 +154,4 @@ public class Pessoa implements Serializable{
 		return "Pessoa [id=" + id + ", nome=" + nome + ", email=" + email + ", dataNascimento=" + dataNascimento
 				+ ", situacao=" + situacao + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

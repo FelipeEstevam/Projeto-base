@@ -21,8 +21,6 @@ import com.stefanini.util.IGenericService;
  */
 public abstract class GenericDao<T, I extends Serializable> implements IGenericService<T, I>{
 
-
-
 	@Inject
 	protected EntityManager entityManager;
 
@@ -80,6 +78,14 @@ public abstract class GenericDao<T, I extends Serializable> implements IGenericS
 		query.from(classe);
 		return Optional.of(getEntityManager().createQuery(query).getResultList());
 	}
+	
+	public Optional<List<T>> getListFilter() {
+		CriteriaBuilder builder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<T> query = builder.createQuery(classe);
+		query.from(classe);
+		return Optional.of(getEntityManager().createQuery(query).getResultList());
+	}
+	
 	/**
 	 * Não precisa de Transacao para efetuar DQL
 	 */
