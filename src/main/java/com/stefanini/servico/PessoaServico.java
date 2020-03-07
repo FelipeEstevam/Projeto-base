@@ -55,6 +55,7 @@ public class PessoaServico implements IGenericService<Pessoa, Long> {
 	@Override
 	public Optional<List<Pessoa>> getList() {
 		return dao.getList();
+		
 	}
 	
 //	@Override

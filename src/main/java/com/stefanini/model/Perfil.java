@@ -78,6 +78,7 @@ public class Perfil implements Serializable {
 	public void setAlteracao(Date alteracao) {
 		this.alteracao = alteracao;
 	}
+	
 
 	@Override
 	public int hashCode() {

@@ -80,6 +80,7 @@ public class Pessoa implements Serializable{
 		this.situacao = situacao;
 	}
 
+	
 
 
 	public Long getId() {

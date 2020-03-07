@@ -56,6 +56,7 @@ public class App {
 //		System.out.println();
 	}
 	
+	
 	private void buscarTodosComFiltro() {
 		servico.getList().ifPresent(i -> {
 			i.forEach(b -> {

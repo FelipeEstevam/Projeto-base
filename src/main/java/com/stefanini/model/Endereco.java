@@ -22,6 +22,7 @@ public class Endereco implements Serializable {
 	@Column(name = "CO_SEQ_ENDERECO")
 	private Long id;
 	
+	
 	@Id
 	@ManyToOne
 	@JoinColumn(name = "CO_SEQ_PESSOA", insertable = true, updatable = true)  
